@@ -26,7 +26,7 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.characters.create');
     }
 
     /**
@@ -36,7 +36,9 @@ class CharacterController extends Controller
      */
     public function store(StoreCharacterRequest $request)
     {
-        //
+        $form_data = $request->validated();
+        $newCharacter = Character::create($form_data);
+        return redirect()->route('admin.characters.show', $newCharacter->id);
     }
 
     /**
@@ -57,7 +59,8 @@ class CharacterController extends Controller
      */
     public function edit(Character $character)
     {
-        //
+        return view('admin.characters.edit', compact('character'));
+
     }
 
     /**
@@ -68,7 +71,10 @@ class CharacterController extends Controller
      */
     public function update(UpdateCharacterRequest $request, Character $character)
     {
-        //
+        $form_data = $request->validated();
+        $character->update($form_data);
+        return view('admin.characters.show', compact('character', $character->id));
+
     }
 
     /**
@@ -78,6 +84,7 @@ class CharacterController extends Controller
      */
     public function destroy(Character $character)
     {
-        //
+        $character->delete();
+        return redirect()->route('admin.characters.index')->with('message', "$character->name deleted.");
     }
 }

@@ -13,7 +13,7 @@ class UpdateCharacterRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class UpdateCharacterRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:50|min:3',
+            'level' => 'required',
+            'class' => 'required|max:50|min:3',
+            'race' => 'required|max:50|min:3',
+            'lifepoint' => 'required',
+            'strength' => 'required',
+            'agility' => 'required',
+            'main_weapon' => 'required|max:50|min:3',
         ];
     }
 }
