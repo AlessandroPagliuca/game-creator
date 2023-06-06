@@ -7,8 +7,9 @@
             <img src="image/logosuperbello.png" style="width: 200px" alt="">
         </div>
         <h1 class="display-5 fw-bold">
-                Benvenuto in questa pagina bellissima
+                Benvenuto in questa pagina bellissima creata da Alessandro, Anas, Arianna, Francesco, Giovanni J. e Giuseppe.
             </h1>
+
 
             <p class="col-md-8 fs-4"></p>
             <a href="{{ route('login') }}" class="btn btn-outline-primary" type="button">Vai al login</a>
@@ -17,8 +18,8 @@
 </div>
 
 <div class="content">
-    <div class="container">
-        <p>Questa pagina bellissima è stata creata da Alessandro, Anas, Arianna, Francesco, Giovanni J. e Giuseppe</p>
+    <div class="container text-black">
+
     </div>
 </div>
 @endsection

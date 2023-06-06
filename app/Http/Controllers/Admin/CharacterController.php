@@ -73,7 +73,8 @@ class CharacterController extends Controller
     {
         $form_data = $request->validated();
         $character->update($form_data);
-        return view('admin.characters.show', compact('character', $character->id));
+        $characters = Character::all();
+        return view('admin.characters.index', compact('characters'));
 
     }
 
