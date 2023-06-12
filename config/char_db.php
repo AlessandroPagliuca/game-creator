@@ -3,14 +3,15 @@
 return[
     'characters'=> [
         [
-            'name' => 'John',
-            'level' => 10,
+            'name' => 'Maradona',
+            'level' => 999,
             'class' => 'Warrior',
-            'race' => 'Human',
-            'lifepoint' => 100,
-            'strength' => 20,
-            'agility' => 15,
-            'main_weapon' => 'Sword',
+            'race' => 'Alien',
+            'lifepoint' => 999,
+            'strength' => 999,
+            'agility' => 999,
+            'main_weapon' => 'kick',
+        
         ],
         [
             'name' => 'Jane',
