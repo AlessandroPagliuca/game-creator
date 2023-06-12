@@ -1,20 +1,19 @@
-
 .bg-team1 {
     background: rgb(255, 255, 255);
     background: linear-gradient(90deg, rgba(1, 186, 225, 1) 0%, rgba(1, 186, 225, 1) 47%, rgba(45, 65, 143, 1) 94%);
 }
 
-.bg-height{
+.bg-height {
     height: 100vh;
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(315deg, #2D418F 0%, #01BAE1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(315deg, #2D418F 0%, #01BAE1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.bg-panna{
+.bg-panna {
     background-color: #fef6e1;
 }
 
@@ -28,7 +27,7 @@
     max-width: 40rem;
 }
 
-  .profile .profile-img {
+.profile .profile-img {
     height: 80vw;
     max-height: 45rem;
     position: absolute;
@@ -47,7 +46,7 @@
     font-weight: 300;
 }
 
-.bg-register{
+.bg-register {
     height: 100vh;
 }
 
@@ -73,14 +72,17 @@ $color-5: #C22E13;
 
 
 .bg-team {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(1, 186, 225, 1) 47%, rgba(45, 65, 143, 1) 94%);
+    background: rgba($color: #FFFFFF, $alpha: 0.5);
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.5) 0%, rgba(1, 186, 225, 1) 47%, rgba(45, 65, 143, 1) 94%);
 }
 
-
-.card-bg{
-    background: rgb(1,186,225);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 40%,rgba(1,186,225,1)  100%);
+.gi-pattern {
+    background-color: #ffffff;
+    opacity: 1;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 19px), repeating-linear-gradient(#00D5DC55, #00D5DC);
 }
 
-
+.card-bg {
+    background: rgb(1, 186, 225);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 40%, rgba(1, 186, 225, 1) 100%);
+}
