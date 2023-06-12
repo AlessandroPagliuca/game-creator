@@ -2,4 +2,21 @@ $color-1: #01BAE1;
 $color-2: #2D418F;
 $color-3: #FFFFFF;
 $color-4: #F6743E;
+
 $color-5: #C22E13;
+
+.navbar-content {
+    width: 100%;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.main-content {
+    width: 100%;
+    height: calc(100vh - 90px);
+}
+
+.bg-team {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(1, 186, 225, 1) 47%, rgba(45, 65, 143, 1) 94%);
+}
