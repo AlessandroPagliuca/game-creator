@@ -29,6 +29,9 @@
                             <p class="card-text"><i class="fa-solid fa-person-running"></i>: {{ $character->agility }} </p>
                             <p class="card-text"><span class="fw-bold text-capitalize">weapon:</span> {{ $character->main_weapon }}</p>
 
+
+                            <p>{{ $character->type ? $character->type->name : 'No type' }}</p>
+
                             <div class="d-flex justify-content-between align-items-center">
                                 <a class="m-1" href="{{ route('admin.characters.show', $character->id) }}"><button
                                         class="btn btn-warning"> Show</button></a>

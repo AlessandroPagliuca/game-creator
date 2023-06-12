@@ -11,7 +11,7 @@ return[
             'strength' => 999,
             'agility' => 999,
             'main_weapon' => 'kick',
-        
+
         ],
         [
             'name' => 'Jane',
@@ -104,17 +104,6 @@ return[
             'main_weapon' => 'Wand'
         ]
         ],
-    'types' => [
-        ['name' => 'Rimorchiatore geriatrico'],
-        ['name' => 'Cecchino nelle scuole'],
-        ['name' => 'Polentone'],
-        ['name' => 'Terrone'],
-        ['name' => 'Stronzone arcobaleno'],
-        ['name' => 'Passatore di HIV'],
-        ['name' => 'Donatore di 104'],
-        ['name' => 'Accettore di disabilità'],
-        ['name' => 'Vincitore del GayPride'],
-        ['name' => 'Orgoglio Ebraico'],
-    ]
-        
+
+
 ];

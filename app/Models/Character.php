@@ -9,7 +9,7 @@ class Character extends Model
 {
     use HasFactory;
 
-    protected $fillable =['name', 'level' , 'class', 'race' , 'lifepoint', 'strength', 'agility', 'main_weapon', 'type'];
+    protected $guarded =[];
 
     public function type()
     {
@@ -20,5 +20,5 @@ class Character extends Model
         return $this->belongsToMany(Weapon::class);
 
     }
-    
+
 }

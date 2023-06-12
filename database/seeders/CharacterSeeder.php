@@ -20,15 +20,21 @@ class CharacterSeeder extends Seeder
      */
     public function run()
     {
-        $types = Type::pluck('id')->all();
         $characters = config('char_db.characters');
+        $typeIds = Type::pluck('id');
 
-        foreach ($characters as $key => $character) {
-            $characters[$key]['type'] = array_rand($types);
-            $characters[$key]['created_at'] = Carbon::now();
-            $characters[$key]['updated_at'] = Carbon::now();
+        foreach ($characters as $character) {
+            $newCharacter = new Character();
+            $newCharacter->name = $character['name'];
+            $newCharacter->level = $character['level'];
+            $newCharacter->class = $character['class'];
+            $newCharacter->race = $character['race'];
+            $newCharacter->lifepoint = $character['lifepoint'];
+            $newCharacter->strength = $character['strength'];
+            $newCharacter->agility = $character['agility'];
+            $newCharacter->main_weapon = $character['main_weapon'];
+            $newCharacter->type_id = $typeIds->random();
+            $newCharacter->save();
         }
-
-        DB::table('characters')->insert($characters);
     }
 }

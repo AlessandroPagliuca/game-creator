@@ -6,6 +6,8 @@ use App\Models\Character;
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
 use App\Http\Controllers\Controller;
+use App\Models\Weapon;
+use App\Models\Type;
 
 class CharacterController extends Controller
 {
@@ -15,7 +17,9 @@ class CharacterController extends Controller
      */
     public function index()
     {
-        $characters = Character::all();
+
+        $characters = Character::with('type')->get();
+
         return view('admin.characters.index', compact('characters'));
     }
 

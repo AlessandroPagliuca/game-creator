@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('characters', function (Blueprint $table) {
-            $table->unsignedBigInteger('type')->nullable();
-            $table->foreign('type')->references('id')->on('types');
+            $table->unsignedBigInteger('type_id')->nullable();
+            $table->foreign('type_id')->references('id')->on('types');
         });
     }
 
@@ -27,8 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('characters', function (Blueprint $table) {
-            $table->dropForeign(['type']);
-            $table->dropColumn('type');
+            $table->dropForeign('characters_type_id_foreign');
+            $table->dropColumn('type_id');
         });
     }
 };
