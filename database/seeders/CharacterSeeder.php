@@ -1,6 +1,9 @@
 <?php
 
 namespace Database\Seeders;
+use Illuminate\Support\Facades\DB;
+
+use Illuminate\Support\Facades\Config;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
@@ -13,19 +16,12 @@ class CharacterSeeder extends Seeder
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run()
     {
-        for ($i = 0; $i < 15; $i++) {
-            $newCharacter = new Character();
-            $newCharacter->name = $faker->words(3, true);
-            $newCharacter->level = $faker->numberBetween(0, 100);
-            $newCharacter->class = $faker->words(5, true);
-            $newCharacter->race = $faker->words(2, true);
-            $newCharacter->lifepoint = $faker->numberBetween(0, 100);
-            $newCharacter->strength = $faker->numberBetween(0, 100);
-            $newCharacter->agility = $faker->numberBetween(0, 100);
-            $newCharacter->main_weapon = $faker->words(3, true);
-            $newCharacter->save();
+        $characters = config('char_db.characters');
+
+        foreach($characters as $character) {
+            DB::table('characters')->insert($character);
         }
     }
 }
