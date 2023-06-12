@@ -30,7 +30,10 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        return view('admin.characters.create');
+        $types = Type::all();
+        $weapons = Weapon::all();
+
+        return view('admin.characters.create', compact('types', 'weapons'));
     }
 
     /**
@@ -42,6 +45,9 @@ class CharacterController extends Controller
     {
         $form_data = $request->validated();
         $newCharacter = Character::create($form_data);
+        if ($request->has('weapons')) {
+            $newCharacter->weapons()->attach($request->weapons);
+        }
         return redirect()->route('admin.characters.show', $newCharacter->id);
     }
 
@@ -63,7 +69,10 @@ class CharacterController extends Controller
      */
     public function edit(Character $character)
     {
-        return view('admin.characters.edit', compact('character'));
+        $types = Type::all();
+        $weapons = Weapon::all();
+
+        return view('admin.characters.edit', compact('character', 'types', 'weapons'));
 
     }
 
@@ -77,9 +86,12 @@ class CharacterController extends Controller
     {
         $form_data = $request->validated();
         $character->update($form_data);
-        $characters = Character::all();
-        return view('admin.characters.index', compact('characters'));
-
+        if ($request->has('weapons')) {
+            $character->weapons()->sync($request->weapons);
+        } else {
+            $character->weapons()->sync([]);
+        }
+        return redirect()->route('admin.characters.show', $character->id);
     }
 
     /**
