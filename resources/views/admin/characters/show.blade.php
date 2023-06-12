@@ -38,6 +38,23 @@
 
                 </div>
                 <div class="col-12">
+                    <p class="badge badge-pill bg-dark text-uppercase p-2">Type:
+                        {{ $character->type ? $character->type->name : 'No tech specified' }}</p>
+
+                </div>
+                <div class="col-12">
+
+                @if ($character->weapons && count($character->weapons) > 0)
+                    <div>
+                        @foreach ($character->weapons as $weapon)
+                            <p class="badge rounded-pill bg-primary text-white">{{ $weapon->name }}</p>
+                        @endforeach
+                    </div>
+                @endif
+
+                </div>
+
+                <div class="col-12">
                     <a class="m-1 btn btn-success" href="{{ route('admin.characters.edit', $character->id) }}">
                         Edit
                     </a>
