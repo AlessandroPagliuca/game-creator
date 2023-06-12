@@ -1,10 +1,15 @@
 <?php
 
 namespace Database\Seeders;
+use Illuminate\Support\Facades\DB;
+
+use Illuminate\Support\Facades\Config;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 use App\Models\Character;
+use Illuminate\Support\Carbon;
+use App\Models\Type;
 
 class CharacterSeeder extends Seeder
 {
@@ -13,19 +18,17 @@ class CharacterSeeder extends Seeder
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run()
     {
-        for ($i = 0; $i < 15; $i++) {
-            $newCharacter = new Character();
-            $newCharacter->name = $faker->words(3, true);
-            $newCharacter->level = $faker->numberBetween(0, 100);
-            $newCharacter->class = $faker->words(5, true);
-            $newCharacter->race = $faker->words(2, true);
-            $newCharacter->lifepoint = $faker->numberBetween(0, 100);
-            $newCharacter->strength = $faker->numberBetween(0, 100);
-            $newCharacter->agility = $faker->numberBetween(0, 100);
-            $newCharacter->main_weapon = $faker->words(3, true);
-            $newCharacter->save();
+        $types = Type::pluck('id')->all();
+        $characters = config('char_db.characters');
+
+        foreach ($characters as $key => $character) {
+            $characters[$key]['type'] = array_rand($types);
+            $characters[$key]['created_at'] = Carbon::now();
+            $characters[$key]['updated_at'] = Carbon::now();
         }
+
+        DB::table('characters')->insert($characters);
     }
 }
