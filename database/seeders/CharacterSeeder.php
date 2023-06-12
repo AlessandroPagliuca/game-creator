@@ -9,6 +9,7 @@ use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 use App\Models\Character;
 use Illuminate\Support\Carbon;
+use App\Models\Type;
 
 class CharacterSeeder extends Seeder
 {
@@ -19,12 +20,15 @@ class CharacterSeeder extends Seeder
      */
     public function run()
     {
+        $types = Type::pluck('id')->all();
         $characters = config('char_db.characters');
 
-        foreach($characters as $character) {
-            $character['created_at'] = Carbon::now();
-            $character['updated_at'] = Carbon::now();
-            DB::table('characters')->insert($character);
+        foreach ($characters as $key => $character) {
+            $characters[$key]['type'] = array_rand($types);
+            $characters[$key]['created_at'] = Carbon::now();
+            $characters[$key]['updated_at'] = Carbon::now();
         }
+
+        DB::table('characters')->insert($characters);
     }
 }
