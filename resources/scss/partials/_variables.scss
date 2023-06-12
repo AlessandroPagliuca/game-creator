@@ -1,3 +1,56 @@
+
+.bg-team1 {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(1, 186, 225, 1) 0%, rgba(1, 186, 225, 1) 47%, rgba(45, 65, 143, 1) 94%);
+}
+
+.bg-height{
+    height: 100vh;
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(315deg, #2D418F 0%, #01BAE1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-panna{
+    background-color: #fef6e1;
+}
+
+.profile {
+    position: relative;
+    height: 75vw;
+    width: 75vw;
+    border-radius: 5vw;
+    margin-top: 5vw;
+    max-height: 40rem;
+    max-width: 40rem;
+}
+
+  .profile .profile-img {
+    height: 80vw;
+    max-height: 45rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: #6c757d !important;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.bg-register{
+    height: 100vh;
+}
+
 $color-1: #01BAE1;
 $color-2: #2D418F;
 $color-3: #FFFFFF;
@@ -29,6 +82,5 @@ $color-5: #C22E13;
     background: rgb(1,186,225);
     background: linear-gradient(180deg, rgba(255,255,255,1) 40%,rgba(1,186,225,1)  100%);
 }
-
 
 
