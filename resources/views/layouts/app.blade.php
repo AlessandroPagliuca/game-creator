@@ -19,7 +19,7 @@
     @vite(['resources/js/app.js'])
 </head>
 
-<body>
+<body class="gi-pattern">
     <div class="bg-team" id="app">
 
 
