@@ -23,7 +23,7 @@ class TypeSeeder extends Seeder
             'Sacerdote Veneto',
             'Milanista in semifinale',
             'Dominatore di Milf',
-            'Stronzone arcobaleno',
+            'Stronzone LGBTQIA+ amazon prime 4k full HD',
             'Passatore di HIV',
             'Donatore di 104',
             'Accettore di disabilità',
