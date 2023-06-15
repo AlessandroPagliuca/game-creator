@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -19,19 +20,26 @@ class TypeSeeder extends Seeder
     public function run()
     {
         $types = [
-            'Rimorchiatore geriatrico',
-            'Sacerdote Veneto',
-            'Milanista in semifinale',
-            'Dominatore di Milf',
-            'Stronzone LGBTQIA+ amazon prime 4k full HD',
-            'Passatore di HIV',
-            'Donatore di 104',
-            'Accettore di disabilità',
-            'Amministratore di Condominio',
-            'Orgoglio Ebraico',
+            'Distruttore di mondi',
+            'Ladro gentiluomo',
+            'Il campione',
+            'Eroe del piano materiale',
+            'L\'appestato',
+            'Il reietto',
+            'Devoto alla giustizia',
+            'Lo spacca-teschi',
+            'Arcanista Dimensionale',
+            'Apirante Necromante',
+            'Domatore di Draghi',
+            'Distruttore di Goblin',
+            'Seduttore di orchi',
+            'Il devoto',
+            'Lo sfuggente',
+            'Signore dell\'antico regno',
+
         ];
 
-        foreach($types as $type) {
+        foreach ($types as $type) {
             $newType = new Type();
             $newType->name = $type;
             $newType->save();
