@@ -27,7 +27,7 @@ class TypeSeeder extends Seeder
             'Passatore di HIV',
             'Donatore di 104',
             'Accettore di disabilità',
-            'Vincitore del GayPride',
+            'Amministratore di Condominio',
             'Orgoglio Ebraico',
         ];
 
