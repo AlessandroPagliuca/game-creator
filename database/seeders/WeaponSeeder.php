@@ -24,7 +24,12 @@ class WeaponSeeder extends Seeder
             "Granade",
             "Gun",
             "Mjolnir",
-            "Shield"
+            "Shield",
+            "Spear",
+            "Daggers",
+            "Pistol",
+            "Potion",
+            "Gold coins",
         ];
         foreach ($weapons as $weapon) {
             $newWeapon = new Weapon();
