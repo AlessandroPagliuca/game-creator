@@ -19,9 +19,9 @@ class CharacterController extends Controller
         ], 200);
     }
 
-    public function show($slug)
+    public function show($id)
     {
-        $character = Character::with('type', 'weapons')->where('slug', $slug)->first();
+        $character = Character::with('type', 'weapons')->where('id', $id)->first();
 
         if ($character) {
             return response()->json([
