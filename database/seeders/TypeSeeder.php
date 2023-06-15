@@ -19,16 +19,16 @@ class TypeSeeder extends Seeder
     public function run()
     {
         $types = [
-         'Rimorchiatore geriatrico',
-        'Cecchino nelle scuole',
-         'Polentone',
-        'Terrone',
-        'Stronzone arcobaleno',
-          'Passatore di HIV',
-          'Donatore di 104',
-          'Accettore di disabilità',
-          'Vincitore del GayPride',
-          'Orgoglio Ebraico',
+            'Rimorchiatore geriatrico',
+            'Sacerdote Veneto',
+            'Milanista in semifinale',
+            'Dominatore di Milf',
+            'Stronzone arcobaleno',
+            'Passatore di HIV',
+            'Donatore di 104',
+            'Accettore di disabilità',
+            'Vincitore del GayPride',
+            'Orgoglio Ebraico',
         ];
 
         foreach($types as $type) {
