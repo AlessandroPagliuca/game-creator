@@ -19,7 +19,7 @@
             <div class="col-xxl-7">
                 <!-- Header profile picture-->
                 <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                    <div class="profile bg-team1">
+                    <div class="profile">
                         <img class="profile-img" src="https://img.freepik.com/free-vector/skull-gaming-with-joy-stick-emblem-modern-style_32991-492.jpg"/>
                 </div>
             </div>
